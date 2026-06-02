@@ -1,0 +1,8 @@
+{
+  "name": "Finança Inteligente",
+  "description": "Módulo financeiro pessoal inteligente com lançamento por voz e fluxo de caixa integrado para o Grupo 3A.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

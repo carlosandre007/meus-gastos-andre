@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", sans-serif;
+  
+  --color-brand-surface: #F9FAFB;
+  --color-brand-dim: #E5E7EB;
+  --color-brand-bright: #FFFFFF;
+  --color-brand-lowest: #F3F4F6;
+  --color-brand-low: #F9FAFB;
+  --color-brand-container: #FFFFFF;
+  --color-brand-high: #E5E7EB;
+  
+  --color-brand-primary: #111827;
+  --color-brand-secondary: #10B981;
+  --color-brand-tertiary: #F59E0B;
+  --color-brand-error: #EF4444;
+}
+
+body {
+  background-color: #F9FAFB;
+  color: #111827;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphic cards */
+.glass-card {
+  background: rgba(16, 32, 52, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animate strokes for lines */
+.sparkline-svg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+
+.pulse-emerald {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .4; transform: scale(1.06); }
+}
+
